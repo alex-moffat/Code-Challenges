@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Code Challenge 2020.09.30</title>
+        <meta charset="utf-8">
+        <script>
+            function inlineSolution(change) {
+                document.getElementById("answer").innerHTML = printAnswer((change[0] * 0.25) + (change[1] * 0.10) + (change[2] * 0.05) + (change[3] * 0.01) >= parseFloat(document.getElementById("amount").value)) 
+            }
+            function switchSolution(change) {
+                totalChange = 0;
+                for (i=0; i<change.length; i++) {
+                    switch(i) {
+                        case 0:
+                            totalChange += change[i] * 0.25
+                            break;
+                        case 1:
+                            totalChange += change[i] * 0.10
+                            break;
+                        case 2:
+                            totalChange += change[i] * 0.05
+                            break;
+                        case 3:
+                            totalChange += change[i] * 0.01
+                            break;
+                    }                    
+                }
+                document.getElementById("answer").innerHTML = printAnswer(totalChange >= parseFloat(document.getElementById("amount").value));                
+            }
+            function printAnswer(enough){
+                return (enough) ? "You can pay the amount" : "You can NOT pay the amount";
+            }
+        </script>        
+	</head>
+	<body>
+        <p>Click to find out if you have enough change in your pocket to pay $<input id="amount"></input></p>
+        <button onclick="switchSolution([30, 40, 20, 5])">Using Switch</button>
+        <button onclick="inlineSolution([30, 40, 20, 5])">Inline </button>
+        <p id='answer'>answer</p>          
+	</body>
+</html>
