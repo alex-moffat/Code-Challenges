@@ -7,16 +7,25 @@ Write a routine that reverses a string in place.
 ```python
 def reverseString(arg):
     rstr = ""
-    for i in range(-1, -len(arg)-1, -1):
+    for i in range(-1, -len(arg) - 1, -1):
         rstr += (arg[i])
-    return(rstr)
+    return (rstr)
+
+
+def reverseShort(arg):
+    return arg[::-1]
+
+
+def reverseSlice(arg):
+    return arg[slice(-1, -len(arg) - 1, -1)]
 
 
 # ========== MAIN
 if __name__ == '__main__':
     print(reverseString("Hello, World"))
+    print(reverseShort("Hello, World"))
+    print(reverseSlice("Hello, World"))
 ```
-
 
 ## Challenge_2 Requirements
 You are given an array of positive numbers from 1 to n, such that all numbers from 1 to n are present except one number (x). You have to find x. The input array is not sorted.
