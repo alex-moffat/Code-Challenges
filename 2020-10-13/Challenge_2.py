@@ -5,12 +5,18 @@
 # =============================================================================
 
 
-def missingNum(arg):
+def missingNums(arg):
     for i in range(len(arg)):
         if (i + 1) not in arg:
             print("x = {}".format(i + 1))
 
 
+def missingNum(arg):
+    direct = (((len(arg)+1) * (len(arg)+2)) / 2) - sum(arg)
+    print("x = {:n}".format(direct))
+
+
 # ========== MAIN
 if __name__ == '__main__':
+    missingNums([3, 7, 1, 2, 8, 4, 5])
     missingNum([3, 7, 1, 2, 8, 4, 5])
