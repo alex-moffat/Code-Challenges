@@ -1,4 +1,5 @@
 # Challenge 2020.10.13
+Both challenges completed in Python
 
 ## Challenge_1 Requirements
 Write a routine that reverses a string in place.
