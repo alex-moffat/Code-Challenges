@@ -1,51 +1,39 @@
-# Challenge 2020.10.13
-Both challenges completed in Python
+# Challenge 2020.10.21
+Both challenges completed in JavaScript
 
 ## Challenge_1 Requirements
-Write a routine that reverses a string in place.
+Given a string, return true if the string is a palindrome and false if it isn’t. Include spaces and punctuation in deciding if the string is a palindrome.
 
 ### Solution
-```python
-def reverseString(arg):
-    rstr = ""
-    for i in range(-1, -len(arg) - 1, -1):
-        rstr += (arg[i])
-    return (rstr)
+```JS
+function palAnswer() {
+    document.getElementById("answer").innerHTML = (palCheck(document.getElementById("input").value.toLowerCase())) ? "Is Palindrome" : "NOT Palindrome";                
+}
 
-
-def reverseShort(arg):
-    return arg[::-1]
-
-
-def reverseSlice(arg):
-    return arg[slice(-1, -len(arg) - 1, -1)]
-
-
-# ========== MAIN
-if __name__ == '__main__':
-    print(reverseString("Hello, World"))
-    print(reverseShort("Hello, World"))
-    print(reverseSlice("Hello, World"))
+function palCheck(input) {
+    if (input.length > 0) {
+        for (i=0; i<(input.length / 2); i++) {
+            if (input[i] != input[(input.length - 1) - i]) return false;
+        } 
+        return true;
+    }
+    return false;
+}            
 ```
 
 ## Challenge_2 Requirements
-You are given an array of positive numbers from 1 to n, such that all numbers from 1 to n are present except one number (x). You have to find x. The input array is not sorted.
+A function that takes a string as argument and returns the number of vowels contained in that string.
 
 ### Solution
-```python
-def missingNums(arg):
-    for i in range(len(arg)):
-        if (i + 1) not in arg:
-            print("x = {}".format(i + 1))
-
-
-def missingNum(arg):
-    direct = (((len(arg)+1) * (len(arg)+2)) / 2) - sum(arg)
-    print("x = {:n}".format(direct))
-
-
-# ========== MAIN
-if __name__ == '__main__':
-    missingNums([3, 7, 1, 2, 8, 4, 5])
-    missingNum([3, 7, 1, 2, 8, 4, 5])
+```JS
+function vowelAnswer() {
+    input = document.getElementById("input").value.toLowerCase();
+    theAnswer = 0;
+    for (var c of input) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            theAnswer++;
+        }
+    }                
+    document.getElementById("answer").innerHTML = theAnswer;         
+}        
 ```
