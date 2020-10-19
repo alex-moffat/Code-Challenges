@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Code Challenge 2020.10.21_1</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Alex_Moffat">
+        <meta name="description" content="Given a string, return true if the string is a palindrome and false if it isn’t. Include spaces and punctuation in deciding if the string is a palindrome.">
+        <script>
+            function palAnswer() {
+                document.getElementById("answer").innerHTML = (palCheck(document.getElementById("input").value.toLowerCase())) ? "Is Palindrome" : "NOT Palindrome";                
+            }
+            function palCheck(input) {
+                if (input.length > 0) {
+                    for (i=0; i<(input.length / 2); i++) {
+                        if (input[i] != input[(input.length - 1) - i]) return false;
+                    } 
+                    return true;
+                }
+                return false;
+            }            
+        </script>        
+	</head>
+	<body>
+        <h1>Code Challenge 2020.10.21_1</h1>
+        <h2>Given a string, return true if the string is a palindrome and false if it isn’t. Include spaces and punctuation in deciding if the string is a palindrome.</h2>
+        <br>
+        <p>Input a string and check if it is a palindrome.<input id="input"></input></p>
+        <button onclick="palAnswer()">Print Answer</button>
+        <p id='answer'></p>          
+	</body>
+</html>

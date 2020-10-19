@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Code Challenge 2020.10.21_1</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Alex_Moffat">
+        <meta name="description" content="A function that takes a string as argument and returns the number of vowels contained in that string.">
+        <script>
+            function vowelAnswer() {
+                input = document.getElementById("input").value.toLowerCase();
+                theAnswer = 0;
+                for (var c of input) {
+                    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                        theAnswer++;
+                    }
+                }                
+                document.getElementById("answer").innerHTML = theAnswer;         
+            }            
+        </script>        
+	</head>
+	<body>
+        <h1>Code Challenge 2020.10.21_2</h1>
+        <h2>A function that takes a string as argument and returns the number of vowels contained in that string.</h2>
+        <br>
+        <p>Input a string and check how many vowels.<input id="input"></input></p>
+        <button onclick="vowelAnswer()">Print Answer</button>
+        <p id='answer'></p>          
+	</body>
+</html>
