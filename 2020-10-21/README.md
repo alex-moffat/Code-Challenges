@@ -6,11 +6,20 @@ Given a string, return true if the string is a palindrome and false if it isn’
 
 ### Solution
 ```JS
-function palAnswer() {
-    document.getElementById("answer").innerHTML = (palCheck(document.getElementById("input").value.toLowerCase())) ? "Is Palindrome" : "NOT Palindrome";                
+function palAnswer(button) {
+    if (button == 1){
+        document.getElementById("answer1").innerHTML = (palCheck(document.getElementById("input").value.toLowerCase(), false)) ? "Is Palindrome" : "NOT Palindrome"; 
+    }
+    else if (button == 2) {
+        document.getElementById("answer2").innerHTML = (palCheck(document.getElementById("input").value.toLowerCase(), true)) ? "Is Palindrome" : "NOT Palindrome";
+    }                               
 }
 
-function palCheck(input) {
+function palCheck(input, exclude) {
+    if (exclude) {
+        input = input.replace(/[() ,'’‘"“”;:.!-?]/g, "").trim()
+    }
+    console.log(input);
     if (input.length > 0) {
         for (i=0; i<(input.length / 2); i++) {
             if (input[i] != input[(input.length - 1) - i]) return false;
