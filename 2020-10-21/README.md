@@ -2,7 +2,12 @@
 Both challenges completed in JavaScript
 
 ## Challenge_1 Requirements
-Given a string, return true if the string is a palindrome and false if it isn’t. Include spaces and punctuation in deciding if the string is a palindrome.
+Given a string, return true if the string is a palindrome and false if it isn’t. 
+- <b>Include spaces</b> and punctuation in deciding if the string is a palindrome.
+- <b>Exclude spaces</b> and punctuation in deciding if the string is a palindrome.
+
+### Output
+<kbd><img src="https://github.com/alex-moffat/Code-Challenges/blob/main/2020-10-21/Screenshot_2020-10-20.jpg"/></kbd>
 
 ### Solution
 ```JS
