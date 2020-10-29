@@ -7,7 +7,7 @@ Given a string, return true if the string is a palindrome and false if it isn’
 - <b>Exclude spaces</b> and punctuation in deciding if the string is a palindrome.
 
 ### Output
-<kbd><img src="https://github.com/alex-moffat/Code-Challenges/blob/main/2020-10-21/Screenshot_2020-10-20.jpg"/></kbd>
+<kbd><img src="https://github.com/alex-moffat/Code-Challenges/blob/main/2020-10-28/Screenshot_tempConverter.jpg"/></kbd>
 
 ### Solution
 ```JS
