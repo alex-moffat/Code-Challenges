@@ -10,7 +10,7 @@ The program must include the following components:
 5. It must throw an alert if the user inputs incorrect data.
 6. If an error is thrown, the message should be displayed instead of the temperature
 7. The app should include some sort of styling (html/css).
-Added: Change photo based temperature converted.
+* Change photo based temperature converted.
 
 ### Output
 ![Alt Text](https://github.com/alex-moffat/Code-Challenges/blob/main/2020-10-28/Screenshot_tempConverter.jpg "temp_converter")
