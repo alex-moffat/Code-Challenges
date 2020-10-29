@@ -42,12 +42,13 @@ A function that takes a string as argument and returns the number of vowels cont
 ```JS
 function vowelAnswer() {
     input = document.getElementById("input").value.toLowerCase();
+    vowels = ['a', 'e', 'i', 'o', 'u']
     theAnswer = 0;
     for (var c of input) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+        if (vowels.includes(c)) {
             theAnswer++;
         }
     }                
     document.getElementById("answer").innerHTML = theAnswer;         
-}        
+}                  
 ```
